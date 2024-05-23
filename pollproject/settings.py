@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+$g3)x28e+b#=35kp#khk9vk1&8mx!d7hc&w10a&$n$tg9zgjz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'pollproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.mysql',
+        'NAME': 'poll-db',
+        'USER':'optiprime27',
+        'PASSWORD':'optiprime27',
+        'HOST' : 'database-1.cp4moqis2rbx.ap-northeast-2.rds.amazonaws.com',
+        'PORT' : '3306'
     }
 }
 
